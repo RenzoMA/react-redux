@@ -19,7 +19,6 @@ class ManageCoursePage extends React.Component{
     }
 
     componentWillReceiveProps(nextProps){
-        debugger;
         if (this.props.course.id != nextProps.course.id){
             this.setState({course: Object.assign({},nextProps.course)});
         }
@@ -65,7 +64,6 @@ function getCourseById(courses, id){
     return null;
 }
 function mapStateToProps(state, ownProps){
-    debugger;
     const courseId = ownProps.params.id;
     let course = {id: '', watchHref: '', title: '', authorId: '', length: '',category: ''};
     if(courseId && state.courses.length > 0){
